@@ -1,5 +1,6 @@
 <header>
   <%= link_to(image_tag("header.png", :alt => "Logo"), root_path) %>
-  <!-- <div class="header-blurb">Can you dig it?</div> -->
+  <% if current_user %>
+    <div class="header-blurb">Signed in as <%= current_user.name %><% end %>
   <div style="clear:both;"></div>
 </header>
