@@ -1,3 +1,10 @@
+require 'omniauth-oauth'
+
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :twitter, "4RkOoYFTWBLNJQM6oif0wI1KG", "BrKi1pIPYBFK1FORp5yNAAwFZIq99NgNqQvfR2qNw7GmCaiIja"
+  # provider :developer unless Rails.env.production?
+  provider :twitter, ENV['TWITTER_KEY'], ENV['TWITTER_SECRET']
+
+  OmniAuth.config.on_failure = Proc.new { |env|
+    OmniAuth::FailureEndpoint.new(env).redirect_to_failure
+  }
 end

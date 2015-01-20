@@ -5,6 +5,13 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
 
+  resources :users
+  resources :questions
+
+  get "/login" => redirect("/auth/twitter"), as: :login
+  get '/auth/:provider/callback' => 'sessions#create'
+  get '/auth/failure' => 'sessions#failure'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
