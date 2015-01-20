@@ -1,2 +1,2 @@
-# congress
-Turing Module 3 Individual Project: Just Talkin' About Congress
+# Just Talkin' About Congress
+Turing Module 3 Individual Project
