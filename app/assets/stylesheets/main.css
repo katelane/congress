@@ -17,8 +17,8 @@ body {
   border: 5px solid #005E9F;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
   padding: 10px 10px 60px 10px;
+  border-radius: 15px;
 }
 
 header {
@@ -33,6 +33,16 @@ header img {
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
 }
+
+/*.header-blurb {
+  margin-top: 170px;
+  padding-bottom: 25px;
+  font-family: Helvetica, sans-serif;
+  font-size: 2em;
+  color: #005E9F;
+  float: right;
+  text-transform: uppercase;
+}*/
 
 nav {
   background: #005E9F;
@@ -68,4 +78,27 @@ nav li a {
 
 nav li a:hover {
   color: #D22A27;
+}
+
+footer {
+  font-size: .9em;
+  padding: 0 10px;
+  color: #fff;
+  background: #005E9F;
+  width: 80%;
+  height: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  font-style: italic;
+}
+
+.footer-left {
+  float: left;
+}
+
+.footer-right {
+  float: right;
 }
