@@ -8,8 +8,10 @@ Rails.application.routes.draw do
   resources :users
   resources :questions
 
-  get "/login" => redirect("/auth/twitter"), as: :login
-  get '/auth/:provider/callback' => 'sessions#create'
+  get "/login" => redirect("/auth/twitter"), as: :login  
+  resources :sessions, only: [:create]
+  delete '/sessions', to: 'sessions#destroy'
+  get '/auth/:provider/callback', to: 'sessions#create'
   get '/auth/failure' => 'sessions#failure'
 
   # Example of regular route:

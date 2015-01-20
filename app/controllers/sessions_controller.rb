@@ -4,20 +4,24 @@ class SessionsController < ApplicationController
   end
 
   def create
-    auth = request.env['omniauth.auth']
-    user = User.where(provider: auth['provider'],
-    uid: auth['uid'].to_s).first || User.create_with_omniauth(auth)
-    reset_session
+    user = User.find_or_create_from_auth_hash(auth_hash)
     session[:user_id] = user.id
-    redirect_to root_path, notice: 'Signed in!'
+    redirect_to root_path, notice: "Logged in as #{user.name}"
   end
 
   def destroy
-    reset_session
+    session.clear
     redirect_to root_path, notice: 'Signed out!'
   end
 
   def failure
     redirect_to root_path, alert: 'Authentication error!'
   end
+
+  private
+
+  def auth_hash
+    request.env['omniauth.auth']
+  end
+
 end
