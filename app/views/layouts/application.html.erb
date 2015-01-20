@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Congress</title>
+  <title>Just Talkin' About Congress</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
-
+    <%= render partial: "shared/header" %>
+    <%= render partial: "shared/nav" %>
+    <div class="content">
+    <%= yield %>
+    <%= render partial: "shared/footer" %>
+  </div>
 </body>
 </html>
