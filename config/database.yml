@@ -4,8 +4,8 @@ development:
   database: congress_development
   host: localhost
   pool: 5
-  username: deployment
-  password: <%= ENV['DB_PASSWORD'] %>
+  # username: deployment
+  # password: <%# ENV['DB_PASSWORD'] %>
 
 test:
   adapter: postgresql
@@ -13,8 +13,8 @@ test:
   database: congress_test
   host: localhost
   pool: 5
-  username: deployment
-  password: <%= ENV['DB_PASSWORD'] %>
+  # username: deployment
+  # password: <%# ENV['DB_PASSWORD'] %>
 
 production:
   adapter: postgresql
