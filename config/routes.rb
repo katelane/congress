@@ -7,8 +7,10 @@ Rails.application.routes.draw do
 
   resources :users
   resources :questions
+  resources :legislators
+  # resources :sunlight
 
-  get "/login" => redirect("/auth/twitter"), as: :login  
+  get "/login" => redirect("/auth/twitter"), as: :login
   resources :sessions, only: [:create]
   delete '/sessions', to: 'sessions#destroy'
   get '/auth/:provider/callback', to: 'sessions#create'

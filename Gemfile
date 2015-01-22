@@ -28,6 +28,8 @@ gem 'pg'
 gem 'omniauth'
 gem 'omniauth-twitter', '~> 1.1.0'
 
+gem 'faraday'
+
 # sidesteps some whack ass JS runtime error in production
 gem 'execjs'
 
