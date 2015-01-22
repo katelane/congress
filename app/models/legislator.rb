@@ -8,10 +8,14 @@ class Legislator
     # .map { |legislator| _build_object(legislator) }
   end
 
-  def self.find(bioguide_id)
-    # _build_object(service.legislator(id))
-    service.legislator(bioguide_id)
+  #fake find method just for check-in dummy simulation - remove this
+  def self.find(params)
   end
+
+  # def self.find(bioguide_id)
+  #   # _build_object(service.legislator(id))
+  #   service.legislator(bioguide_id)
+  # end
 
   # private
   #
