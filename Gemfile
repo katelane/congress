@@ -41,6 +41,17 @@ gem 'dotenv-deployment', group: :production
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'simplecov', require: false, group: :test
+  gem 'nokogiri'
+  gem 'better_errors'
+  gem 'pry'
+  gem 'capybara'
+  gem 'selenium'
+  gem 'binding_of_caller'
+  gem 'launchy'
+  gem 'guard-rspec', require: false
+  gem 'factory_girl_rails'
+  gem 'traceroute'
 end
 
 # Use ActiveModel has_secure_password
