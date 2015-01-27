@@ -6,7 +6,7 @@ class LegislatorService
   end
 
   def legislators
-    parse(connection.get("legislators/?apikey=f9fd085a62394fd298e88e036e7eeb11"))
+    parse(connection.get("legislators/?apikey=f9fd085a62394fd298e88e036e7eeb11"))["results"]
   end
 
   def legislator(id)
@@ -18,5 +18,4 @@ class LegislatorService
   def parse(response)
     JSON.parse(response.body)
   end
-
 end

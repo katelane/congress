@@ -4,8 +4,7 @@ class Legislator
   end
 
   def self.all
-    service.legislators
-    # .map { |legislator| _build_object(legislator) }
+    service.legislators.map { |legislator| _build_object(legislator) }
   end
 
   #fake find method just for check-in dummy simulation - remove this
@@ -17,11 +16,10 @@ class Legislator
   #   service.legislator(bioguide_id)
   # end
 
-  # private
-  #
-  # def self._build_object(data)
-  #   # OpenStruct.new(data)
-  #   data.map { |hash| OpenStruct.new(hash) }
-  # end
+  private
+
+  def self._build_object(data)
+    OpenStruct.new(data)
+  end
 
 end

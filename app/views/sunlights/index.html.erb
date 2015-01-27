@@ -1,0 +1,13 @@
+<%= @sunlights.each do |x| %>
+<div class="sunlights">
+  <!-- <%# if x.speaker_first = "" %>
+    <em>No speaker</em><br>
+  <%# else %> -->
+    <%= x.speaker_first %> <%= x.speaker_last %> (<%= x.speaker_state %>-<%= x.speaker_party %>)<br>
+  <!-- <%# end %> -->
+  <%= x.title %><br>
+  Quote: <%= x.speaking.pop %><br>
+  Spoken in the <%= x.chamber %> on <%= x.date %>.<br>
+  Read more: <%= link_to "#{x.origin_url}", x.origin_url, :target => '_blank' %><br>
+</div>
+<% end %>

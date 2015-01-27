@@ -4,9 +4,9 @@ html {
 }
 
 body {
-  background: #BDDCF3;
+  background: #DDDCDC;
   background-image: url("/assets/bkg.png");
-  background-repeat: repeat;
+  background-repeat: repeat-x;
   margin: 0;
   padding: 0;
   font-family: Georgia, serif;
@@ -14,58 +14,59 @@ body {
 }
 
 .content {
-  width:90%;
+  width: 90%;
   background: #fff;
-  border: 5px solid #005E9F;
+  border: 0;
   margin-left: auto;
   margin-right: auto;
-  padding: 10px 10px 60px 10px;
-  border-radius: 15px;
+  margin-top: -13px;
+  padding: 0px 10px 60px 10px;
+  z-index: -1;
 }
 
-.content a {
+.main-content a {
   color: #005E9F;
   text-decoration: none;
 }
 
-.content a:hover {
+.main-content a:hover {
   color: #CA8D3A;
 }
 
 header {
-  padding-top: 10px;
-  padding-left: 100px;
-  margin-bottom: -21px;
+  position: relative;
+  width: 1319px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0;
+  z-index: 0;
 }
 
-header img {
-  width: 800px;
+hr {
+  position: relative;
+  margin-top: -58px;
   border: 5px solid #005E9F;
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
+  z-index: -2;
 }
 
 .header-blurb {
-  margin-top: 170px;
-  margin-right: 100px;
-  background: #fff;
+  position: relative;
+  margin-top: -210px;
+  margin-right: 50px;
   padding:10px;
-  font-family: Helvetica, sans-serif;
+  font-family: Avenir, sans-serif;
   font-size: 1em;
-  color: #005E9F;
-  float: right;
+  color: #F0EFEF;
+  float: left;
   text-transform: uppercase;
-  border-radius: 15px;
+  z-index: 1;
 }
 
 nav {
   background: #005E9F;
-  width: 90%;
-  height: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
+  width: 60%;
+  border-bottom-right-radius: 15px;
+  margin-left: -10px;
 }
 
 nav ul {
@@ -76,16 +77,14 @@ nav li {
   float: left;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 20px;
-  font-size: 1em;
+  font-family: Avenir, sans-serif;
+  font-size: 1.4em;
   text-transform: uppercase;
   color: #fff;
+  /*margin-top: -40px;*/
 }
 
 nav li a {
-  font-family: Helvetica, sans-serif;
-  font-size: 1.3em;
-  text-transform: uppercase;
   text-decoration: none;
   color: #fff;
 }
@@ -120,6 +119,10 @@ nav li a:hover {
   margin-left: 50px;
 }
 
+.sunlights {
+  border: 1px solid #000;
+}
+
 .info-left {
   float: left;
   width: 20%;
@@ -139,13 +142,11 @@ footer {
   padding: 0 10px;
   color: #fff;
   background: #005E9F;
-  width: 80%;
+  width: 90%;
   height: 35px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
   font-style: italic;
 }
 

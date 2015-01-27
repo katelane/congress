@@ -9,14 +9,17 @@
 <body>
 
     <%= render partial: "shared/header" %>
-    <%= render partial: "shared/nav" %>
     <div class="content">
+      <%= render partial: "shared/nav" %>
       <div class="flash-messages">
         <% flash.each do |key, value| %>
         <%= value %>
         <% end %>
       </div>
-    <%= yield %>
+
+    <div class="main-content">
+      <%= yield %>
+    </div>
   </div>
     <%= render partial: "shared/footer" %>
 </body>

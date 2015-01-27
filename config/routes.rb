@@ -8,13 +8,16 @@ Rails.application.routes.draw do
   resources :users
   resources :questions
   resources :legislators
-  # resources :sunlight
+  resources :sunlights
 
   get "/login" => redirect("/auth/twitter"), as: :login
   resources :sessions, only: [:create]
   delete '/sessions', to: 'sessions#destroy'
   get '/auth/:provider/callback', to: 'sessions#create'
   get '/auth/failure' => 'sessions#failure'
+
+
+  get 'code', to: redirect('https://github.com/katelane/congress')
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
