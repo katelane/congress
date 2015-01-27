@@ -63,10 +63,12 @@ hr {
 }
 
 nav {
+  position: relative;
   background: #005E9F;
   width: 60%;
   border-bottom-right-radius: 15px;
   margin-left: -10px;
+  z-index: 1
 }
 
 nav ul {
@@ -77,6 +79,7 @@ nav li {
   float: left;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 10px;
   font-family: Avenir, sans-serif;
   font-size: 1.4em;
   text-transform: uppercase;
