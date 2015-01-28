@@ -2,8 +2,8 @@
 
 <div class="homeitem2">
   <p>Enter your keyword or phrase of choice:</p>
-  <%= form_tag do %>
-  <%= text_field_tag(:q) %>
+  <%= form_tag sunlights_path, method: :get do %>
+  <%= text_field_tag(:field) %>
   <%= submit_tag("Search") %>
   <% end %>
   <p>You can search by legislator, by issue, by anything!</p>

@@ -59,7 +59,17 @@ hr {
   color: #F0EFEF;
   float: left;
   text-transform: uppercase;
-  z-index: 1;
+  z-index: 2;
+}
+
+.header-blurb a {
+  color: #F0EFEF;
+  text-decoration: none;
+  font-size: .8em;
+}
+
+.header-blurb a:hover {
+  color: #fff;
 }
 
 nav {
