@@ -1,13 +1,20 @@
+<h2>Search Results:</h2>
 <% @sunlights.each do |x| %>
 <div class="sunlights">
-  <!-- <%# if x.speaker_first = "" %>
-    <em>No speaker</em><br>
-  <%# else %> -->
-    <%= x.speaker_first %> <%= x.speaker_last %> (<%= x.speaker_state %>-<%= x.speaker_party %>)<br>
-  <!-- <%# end %> -->
-  <%= x.title %><br>
-  Quote: <%= x.speaking.pop %><br>
-  Spoken in the <%= x.chamber %> on <%= x.date %>.<br>
-  Read more: <%= link_to "#{x.origin_url}", x.origin_url, :target => '_blank' %><br>
+  <div class="sunlights-left">
+    Title: <%= x.title %><br>
+    <% if x.speaker_first == nil %>
+      Speaker: <em>N/A</em><br>
+    <% else %>
+      Speaker: <%= x.speaker_first %> <%= x.speaker_last %> (<%= x.speaker_state %>-<%= x.speaker_party %>)<br>
+    <% end %>
+    Mentioned in the <%= x.chamber %> on <%= Date.parse(x.date).strftime("%m/%d/%Y") %>.<br>
+  </div>
+  <div class="sunlights-right">
+    Excerpt: ... <%= x.speaking.pop %> ...<br><br>
+    Read full text: <%= link_to "#{x.origin_url}", x.origin_url, :target => '_blank' %>
+  </div>
+  <div style="clear:both;"></div>
 </div>
 <% end %>
+<p><%= link_to "Search again!", root_path %></p><br>

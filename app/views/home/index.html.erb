@@ -1,16 +1,18 @@
-<div class="homeitem"><h1>Search the Congressional Record for keywords or phrases related to the issues that matter to you:</h1></div>
+<div class="home-container">
+  <div class="homeitem"><h1>Search the Congressional Record for keywords or phrases related to the issues that matter to you:</h1></div>
 
-<div class="homeitem2">
-  <p>Enter your keyword or phrase of choice:</p>
-  <%= form_tag sunlights_path, method: :get do %>
-  <%= text_field_tag(:field) %>
-  <%= submit_tag("Search") %>
-  <% end %>
-  <p>You can search by legislator, by issue, by anything!</p>
-  <p><em>Think no one in Congress has ever brought up <strong>pizza?</strong><br>
-    Think again. Go ahead, search for it...</em></p>
+  <div class="homeitem2">
+    <p>Enter your keyword or phrase of choice:</p>
+    <%= form_tag sunlights_path, method: :get do %>
+    <%= text_field_tag(:field) %>
+    <%= submit_tag("Search") %>
+    <% end %>
+    <p>You can search by legislator, by issue, by anything!</p>
+    <p><em>Think no one in Congress has ever brought up <strong>pizza?</strong><br>
+      Think again. Go ahead, search for it...</em></p>
+  </div>
+
+  <div class="homeitem3"><h2>Looking for a particular legislator? <%= link_to "Start here", legislators_path %>. </div>
+
 </div>
-
-<div class="homeitem3"><h2>Looking for a particular legislator? <%= link_to "Start here", legislators_path %>. </div>
-
 <div style="clear:both;"></div>
