@@ -12,7 +12,14 @@
       Think again. Go ahead, search for it...</em></p>
   </div>
 
-  <div class="homeitem3"><h2>Looking for a particular legislator? <%= link_to "Start here", legislators_path %>. </div>
+  <div class="homeitem3">
+    <h2>Looking for a particular legislator?</h2>
+    <p>Enter a zip code to find legislators in that area:</p>
+    <%= form_tag legislators_path, method: :get do %>
+    <%= text_field_tag(:field) %>
+    <%= submit_tag("Search") %>
+    <% end %>
+  </div>
 
 </div>
 <div style="clear:both;"></div>

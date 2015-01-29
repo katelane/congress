@@ -169,6 +169,42 @@ nav li a:hover {
   float: right;
 }
 
+.sunlights-buttons {
+  margin-top: 10px;
+  float: right;
+}
+
+.sunlights-top {
+  background: #CAE2F5;
+  border-radius: 5px;
+  height: 20px;
+  width: 150px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Avenir, sans-serif;
+  padding: 5px;
+}
+
+.legislators {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  background: #F0EFEF;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.legislator {
+  width: 90%;
+  background: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
 .info-left {
   float: left;
   width: 20%;

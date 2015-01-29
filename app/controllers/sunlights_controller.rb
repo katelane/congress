@@ -12,18 +12,4 @@ class SunlightsController < ApplicationController
     @sunlight = Sunlight.find(params[:id])
   end
 
-  def new
-    @sunlight = Sunlight.new
-  end
-
-  def create
-    @sunlight = Sunlight.new(loan_request_params)
-    @sunlight.user_id = current_user.id
-      if @sunlight.save
-        redirect_to sunlights_path
-      else
-        render :new
-      end
-  end
-
 end

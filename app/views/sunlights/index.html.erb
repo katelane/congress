@@ -1,4 +1,7 @@
 <h2>Search Results:</h2>
+<a href="https://twitter.com/share" class="twitter-share-button" data-text="Congress talks about:" data-count="none" data-hashtags="justtalkinaboutcongress">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
 <% @sunlights.each do |x| %>
 <div class="sunlights">
   <div class="sunlights-left">
@@ -12,9 +15,15 @@
   </div>
   <div class="sunlights-right">
     Excerpt: ... <%= x.speaking.pop %> ...<br><br>
-    Read full text: <%= link_to "#{x.origin_url}", x.origin_url, :target => '_blank' %>
+    <%= link_to "Read full text", x.origin_url, :target => '_blank' %>
   </div>
   <div style="clear:both;"></div>
 </div>
 <% end %>
-<p><%= link_to "Search again!", root_path %></p><br>
+
+<div class="sunlights-buttons">
+  <%= link_to "Back to top", "#", :class => "sunlights-top" %>
+</div>
+<div style="clear:both;"></div>
+
+<br>

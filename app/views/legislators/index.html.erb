@@ -1,3 +1,16 @@
+<h2>Search Results:</h2>
+
+<div class="legislators">
 <% @legislators.each do |x| %>
-<%= x.first_name %> <%= x.last_name %><br>
+  <div class="legislator">
+    <%= x.title %> <%= x.first_name %> <%= x.last_name %> |
+    <%= x.party %> in the <%= x.chamber.capitalize %> |
+    Term: <%= Date.parse(x.term_start).strftime("%m/%d/%Y") %> to <%= Date.parse(x.term_end).strftime("%m/%d/%Y") %>
+    </div>
+  <div style="clear:both;"></div>
+
 <% end %>
+</div>
+<br>
+<p>Now that you've identified these legislators, search the <em>Congressional Record</em> for things they have said! <%= link_to "Back to search", root_path %>.</p>
+  <br>

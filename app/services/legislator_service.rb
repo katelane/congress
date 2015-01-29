@@ -9,8 +9,8 @@ class LegislatorService
     parse(connection.get("legislators/?apikey=f9fd085a62394fd298e88e036e7eeb11"))["results"]
   end
 
-  def legislator(id)
-    parse(connection.get("legislators?#{bioguide_id}&all_legislators=true&apikey=f9fd085a62394fd298e88e036e7eeb11"))
+  def zip(zip)
+    parse(connection.get("congress.api.sunlightfoundation.com/legislators/locate?zip=#{zip}&apikey=f9fd085a62394fd298e88e036e7eeb11"))["results"]
   end
 
   private

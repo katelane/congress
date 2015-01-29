@@ -3,18 +3,23 @@ class Legislator
     @service ||= LegislatorService.new
   end
 
-  def self.all
-    service.legislators.map { |legislator| _build_object(legislator) }
+  # def self.all
+  #   service.legislators.map { |legislator| _build_object(legislator) }
+  # end
+
+  def self.all(zip)
+    service.zip(zip).map { |legislator| _build_object(legislator) }
   end
 
   #fake find method just for check-in dummy simulation - remove this
-  def self.find(params)
-  end
+  # def self.find(params)
+  # end
 
-  # def self.find(bioguide_id)
+  # def self.find(zip)
   #   # _build_object(service.legislator(id))
   #   service.legislator(bioguide_id)
   # end
+
 
   private
 
