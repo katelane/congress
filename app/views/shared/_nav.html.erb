@@ -2,7 +2,9 @@
   <ul>
     <li><%= link_to "Search", root_path %></li>
     <li><%= link_to "FAQ", questions_path %></li>
-    <li><%= link_to "Login with Twitter", login_path %></li>
+    <% unless current_user %>
+      <li><%= link_to "Login with Twitter", login_path %></li>
+      <% end %>
   </ul>
   <div style="clear:both;"></div>
 </nav>

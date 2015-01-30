@@ -3,8 +3,14 @@
 <div class="legislators">
 <% @legislators.each do |x| %>
   <div class="legislator">
-    <%= x.title %> <%= x.first_name %> <%= x.last_name %> |
-    <%= x.party %> in the <%= x.chamber.capitalize %> |
+    <p class="legislator-name"><%= x.title %> <%= x.first_name %> <%= x.last_name %></p>
+    <% if x.party == "R" %>
+      Republican in the <%= x.chamber.capitalize %> |
+    <% elsif x.party == "D" %>
+      Democrat in the <%= x.chamber.capitalize %> |
+    <% else %>
+      Independent in the <%= x.chamber.capitalize %>
+    <% end %>
     Term: <%= Date.parse(x.term_start).strftime("%m/%d/%Y") %> to <%= Date.parse(x.term_end).strftime("%m/%d/%Y") %>
     </div>
   <div style="clear:both;"></div>

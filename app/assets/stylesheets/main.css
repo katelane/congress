@@ -205,6 +205,11 @@ nav li a:hover {
   margin-top: 10px;
 }
 
+.legislator-name {
+  font-family: Avenir, sans-serif;
+  font-size: 1.4em;
+}
+
 .info-left {
   float: left;
   width: 20%;
